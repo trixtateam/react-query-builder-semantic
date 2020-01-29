@@ -1,0 +1,126 @@
+.query-builder *, .query-builder *::before, .query-builder *::after {
+    box-sizing: border-box;
+}
+/******************************************************************************/
+/** COMMON ********************************************************************/
+/******************************************************************************/
+.query-builder, .query-preview {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.25;
+    margin: 1rem;
+}
+.query-preview {
+    font-size: 14px;
+    background: white;
+    border: 1px solid #14DCAF;
+    min-height: 1rem;
+    display: block;
+    padding: 1rem;
+}
+.group-or-rule-container__group-or-rule {
+    border-radius: 5px;
+    position: relative;
+}
+.query-builder__group-or-rule-container {
+    margin-bottom: 10px;
+    padding-right: 10px;
+}
+/******************************************************************************/
+/** RULE **********************************************************************/
+/******************************************************************************/
+.group-or-rule__rule-header {
+    float: right;
+}
+.group-or-rule__rule-field, .group-or-rule__rule-operator, .group-or-rule__rule-value, .group-or-rule__rule-operator-options, .group-or-rule__operator-options-sep {
+    display: inline-block;
+}
+.group-or-rule__rule-operator, .group-or-rule__rule-value {
+    margin-left: 10px;
+}
+.group-or-rule__operator-options--sep {
+    margin-right: 10px;
+}
+div.tooltip-inner {
+    max-width: 500px;
+}
+.group-or-rule__rule-field label, .group-or-rule__rule-operator label {
+    display: block;
+    font-weight: bold;
+}
+
+.group-or-rule__rule-header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.group-or-rule__group-header {
+    display: flex;
+    align-items: center;
+}
+
+.group-or-rule__rule {
+    background-color: white;
+    border: 1px solid lightgrey;
+    padding: 10px;
+}
+/******************************************************************************/
+/** GROUP *********************************************************************/
+/******************************************************************************/
+.group-or-rule__group {
+    background-color: white;
+    border: 1px solid darkgray;
+}
+
+.group-or-rule__group-children {
+    padding-left: 20px;
+}
+.group-or-rule__group-children > .query-builder__group-or-rule-container > .group-or-rule-container__group-or-rule:before {
+    top: -4px;
+    border-width: 0 0 2px 2px;
+}
+.group-or-rule__group-children > .query-builder__group-or-rule-container > .group-or-rule-container__group-or-rule::after {
+    top: 50%;
+    border-width: 0 0 0 2px;
+}
+.group-or-rule__group-children > .query-builder__group-or-rule-container > .group-or-rule-container__group-or-rule::before, .group-or-rule__group-children > .query-builder__group-or-rule-container > .group-or-rule-container__group-or-rule::after {
+    content: '';
+    position: absolute;
+    left: -14px;
+    width: 14px;
+    height: calc(50% + 8px);
+    border-color: #14DCAF;
+    border-style: solid;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.group-or-rule__group-children > .query-builder__group-or-rule-container:first-child > .group-or-rule-container__group-or-rule::before {
+    top: -12px;
+    height: calc(50% + 14px);
+}
+.group-or-rule__group-children > .query-builder__group-or-rule-container:last-child > .group-or-rule-container__group-or-rule::before {
+    border-radius: 0 0 0 4px;
+}
+.group-or-rule__group-children > .query-builder__group-or-rule-container:last-child > .group-or-rule-container__group-or-rule::after {
+    display: none;
+}
+.group-or-rule__group-children.hide--line > .query-builder__group-or-rule-container > .group-or-rule-container__group-or-rule::before, .group-or-rule__group-children.hide--line > .query-builder__group-or-rule-container > .group-or-rule-container__group-or-rule::after {
+    border-color: #14DCAF;
+}
+.group-or-rule__group-header {
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    padding-left: 7px;
+}
+.group-or-rule__group-header .group-or-rule__group-actions {
+    flex: 1;
+    display: flex;
+}
+/******************************************************************************/
+/** COMBINATOR ***************************************************************/
+/******************************************************************************/
+.group-or-rule__group-header .group-or-rule__group-combinators{
+    margin-left: -2px;
+}
